@@ -29,6 +29,40 @@ const Navbar = () => {
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
       <NavButton title="Menu" customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} color="blue" icon={<AiOutlineMenu />} />
+
+      <div className='flex'>
+        <NavButton
+          title="Cart"
+          customFunc={() => handleClick('cart')}
+          color="blue"
+          icon={<FiShoppingCart />}
+        />
+        <NavButton
+          title="Cart"
+          dotColor='03C9D7'
+          customFunc={() => handleClick('chat')}
+          color="blue"
+          icon={<BsChatLeft />}
+        />
+        <NavButton
+          title="Notifications"
+          dotColor='03C9D7'
+          customFunc={() => handleClick('notification')}
+          color="blue"
+          icon={<RiNotification3Line />}
+        />
+        <TooltipComponent
+          content='Profile'
+          position='BottomCenter'
+        >
+          <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
+          onClick={() => handleClick ('userProfile')}>
+            <img
+              src={avatar}
+            />
+          </div>
+        </TooltipComponent>
+      </div>
     </div>
   )
 }
