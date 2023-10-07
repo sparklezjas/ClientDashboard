@@ -24,7 +24,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu } = useStateContext()
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize } = useStateContext()
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
