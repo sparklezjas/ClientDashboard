@@ -24,7 +24,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setScreenSize, screenSize } = useStateContext()
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, setScreenSize, screenSize } = useStateContext()
 
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
@@ -38,14 +38,14 @@ const Navbar = () => {
           icon={<FiShoppingCart />}
         />
         <NavButton
-          title="Cart"
+          title="Chat"
           dotColor='03C9D7'
           customFunc={() => handleClick('chat')}
           color="blue"
           icon={<BsChatLeft />}
         />
         <NavButton
-          title="Notifications"
+          title="Notification"
           dotColor='03C9D7'
           customFunc={() => handleClick('notification')}
           color="blue"
@@ -69,6 +69,11 @@ const Navbar = () => {
             className='text-gray-400 text-14'/>
           </div>
         </TooltipComponent>
+
+        {isClicked.cart && <Cart />}
+        {isClicked.chat && <Chat />}
+        {isClicked.notification && <Notification />}
+        {isClicked.userProfile && <UserProfile />}
       </div>
     </div>
   )
