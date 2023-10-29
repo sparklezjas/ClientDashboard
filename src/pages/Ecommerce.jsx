@@ -72,9 +72,10 @@ const Ecommerce = () => {
               <div className='border-r-1 border-color m-4 pr-10'>
                 <div>
                   <p>
-                    <span>$93,438</span>
-                    <span>23%</span>
+                    <span className='text-font-semibold'>$93,438</span>
+                    <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full tect-white bg-green-400'>23%</span>
                   </p>
+                  <p>Budget</p>
                 </div>
               </div>
             </div>
