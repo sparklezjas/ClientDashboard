@@ -5,7 +5,7 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '.
 const Stacked = () => {
   return (
     <ChartComponent>
-      <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]}
+      <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
     </ChartComponent>
   )
 }
