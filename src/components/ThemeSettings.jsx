@@ -46,7 +46,7 @@ const ThemeSettings = () => {
                 >
                   <div className='relative mt-2 cursor-pointer flex gap-5 items-center'>
                     <button>
-                      
+                      <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />
                     </button>
                   </div>
                 </TooltipComponent>
