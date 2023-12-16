@@ -30,13 +30,27 @@ const ThemeSettings = () => {
               name='theme'
               value='Light'
               className='cursor-pointer'
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Light'}
           />
-          <label htmlFor="dark" className='ml-2 text-md cursor-pointer'>Dark
+          <label htmlFor="light" className='ml-2 text-md cursor-pointer'>Light
           </label>
         </div>
+        <div className='mt-4'>
+        <input
+              type='radio'
+              id='dark'
+              name='theme'
+              value='Dark'
+              className='cursor-pointer'
+              onChange={setMode}
+              checked={currentMode === 'Dark'}
+          />
+            <label htmlFor="dark" className='ml-2 text-md cursor-pointer'>Dark
+            </label>
+          </div>
         </div>
+
         <div className='flex-col border-t-1 border-color p-4 ml-4'>
           <p className='font-semibold text-lg'>Theme Colors</p>
             <div className='flex gap-3'>
@@ -50,9 +64,9 @@ const ThemeSettings = () => {
                       type='button'
                       className='h-10 w-10 rounded-full cursor-pointer'
                       style={{ backgroundColor:item.color}}
-                      onClick={() => {}}
+                      onClick={() => setColor(item.color)}
                     >
-                      <BsCheck className={`ml-2 text-2xl text-white ${true ? 'block' : 'hidden'}`} />
+                      <BsCheck className={`ml-2 text-2xl text-white ${item.color === currentColor ? 'block' : 'hidden'}`} />
                     </button>
                   </div>
                 </TooltipComponent>
