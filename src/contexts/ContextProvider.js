@@ -24,9 +24,9 @@ export const ContextProvider = ({children}) => {
         setThemeSettings(false)
     }
 
-    const setColor = (e) => {
-        setCurrentColor(e.target.value)
-        localStorage.setItem('colorMode', e.target.value)
+    const setColor = (color) => {
+        setCurrentColor(color)
+        localStorage.setItem('colorMode', color)
     }
 
 
